@@ -65,7 +65,7 @@
             }
 
             function displayOutput(data){
-                avatarImg = `<img src="${rootPath}/controller/uploads/${data[0].avatar}" width='200' />`;
+                avatarImg = `<img src="${rootPath}/controller/uploads/${data[0].avatar}" width='200' height='200' />`;
                 document.getElementById("avatarImage").innerHTML = avatarImg;
                 document.getElementById("firstname").value = data[0].firstname;
                 document.getElementById("lastname").value = data[0].lastname;
