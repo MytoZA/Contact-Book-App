@@ -5,30 +5,38 @@
         <title></title>
     </head>
     <body onload="getContact()">
+
+        <h1>Manage Contact</h1>
+        <br>
         <div id="avatarImage"></div>
+        <br/>
         <form id="editForm">
             <label for="firstname">First Name:</label>
             <input type="text" name="firstname" id="firstname" readonly>
             <br/>
+            <br/>
             <label for="lastname">Last Name:</label>
             <input type="text" name="lastname" id="lastname" readonly>
+            <br/>
             <br/>
             <label for="mobile">Mobile:</label>
             <input type="text" name="mobile" id="mobile" readonly>
             <br/>
+            <br/>
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" readonly>
+            <br/>
             <br/>
             <label for="avatar" id="avatarLabel" hidden>Change Profile Image</label>
             <br/>
             <input type="file" name="avatar" id="avatar" hidden>
-            <br/>
-            <br/>
             <button type="submit" id="submitForm" hidden>Submit</button>
         </form>
-        <br/>
+
         <button id="homeLink" type="button">Home</button>
+        <br/>
         <button id="editContact" type="button">Edit</button>
+        <br/>
         <button id="deleteContact" type="button">Delete</button>
         
         <script src="config.js"></script>
@@ -65,7 +73,7 @@
             }
 
             function displayOutput(data){
-                avatarImg = `<img src="${rootPath}/controller/uploads/${data[0].avatar}" width='200' height='200' />`;
+                avatarImg = `<img src="${rootPath}/controller/uploads/${data[0].avatar}" width='300vw' height='300vh' />`;
                 document.getElementById("avatarImage").innerHTML = avatarImg;
                 document.getElementById("firstname").value = data[0].firstname;
                 document.getElementById("lastname").value = data[0].lastname;
